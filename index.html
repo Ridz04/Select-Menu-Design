@@ -1,0 +1,76 @@
+<html>
+
+<head> 
+    <title>Custom Select Menu Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <div class="selector">
+            <div id="selectField">
+                <p id="selectText">Select Social Media</p>
+                <img src="images/arrow.png" id="arrowIcon">
+            </div>
+
+            <ul id="list" class="hide">
+                <li class="options">
+                    <img src="images/facebook.png">
+                    <p>Facebook</p>
+                </li>
+                <li class="options">
+                    <img src="images/instagram.png">
+                    <p>instagram</p>
+                </li>
+                <li class="options">
+                    <img src="images/pinterest.png">
+                    <p>pinterest</p>
+                </li>
+                <li class="options">
+                    <img src="images/twitter.png">
+                    <p>twitter</p>
+                </li>
+                <li class="options">
+                    <img src="images/whatsapp.png">
+                    <p>whatsapp</p>
+                </li>
+                <li class="options">
+                    <img src="images/youtube.png">
+                    <p>youtube</p>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+    <script>
+
+        var selectField = document.getElementById("selectField");
+        var selectText = document.getElementsById("selectText");
+        var options = document.getElementsByClassName("options");
+        var list = document.getElementsById("list");
+        var arrowIcon = document.getElementsById("arrowIcon");
+
+        selectField.onclick = function () {
+            list.classList.toggle("hide");
+            arrowIcon.classList.toggle("rotate");
+
+        }
+
+        for(option of options) {
+            option.onclick = function(){
+                selectText.innerHTML= this.textContent;
+            }
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
